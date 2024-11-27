@@ -51,11 +51,6 @@ pipeline {
          echo 'Running code quality checks'
          }
         }
-        post{
-            always{
-                echo 'Pipeline execution completed.'
-            }
-        }
      }
 }
                                                             
