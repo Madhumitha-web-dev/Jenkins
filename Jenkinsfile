@@ -10,7 +10,7 @@ pipeline {
         } 
         stage('Clean and Package') {
         steps {
-        echo 'Cleaning workspace and packaging_
+        echo 'Cleaning workspace and packaging_'
         sh 'mvn clean package'
 
         }
