@@ -23,8 +23,7 @@ pipeline {
         }
       }
     }
-        stage('Parallel Tasks') {
-              parallel {
+ 
               stage('Regression and Acceptance Tests') {
        stages {
         stage('Regression Testing') {
@@ -39,8 +38,8 @@ pipeline {
       }
      }
     }  
-  }
-}
+       stage('Parallel Tasks') {
+              parallel {
         stage('Performance Testing') {
             steps{
             echo 'Running performance tests'
@@ -52,6 +51,8 @@ pipeline {
          }
         }
      }
+}
+    }
 }
                                                             
 
