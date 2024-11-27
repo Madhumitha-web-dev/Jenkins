@@ -41,5 +41,26 @@ pipeline {
 }  
 }
         }
+        stage('Performance Testing and Code Quality') { steps {
+
+parallel {
+
+stage('Performance Testing') {
+
+echo 'Running performance tests...'
+
+sh/run-performance-tests.sh
+
+}
+
+}
+
+stage('Code Quality Check') {
+
+steps {
+
+echo 'Running code quality checks...' sh 'soner-scanner'
+
+}
     }
 }
