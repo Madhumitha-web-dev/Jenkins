@@ -38,8 +38,6 @@ pipeline {
         }
       }
     }
- 
-              stage('Regression and Acceptance Tests') {
        stages {
         stage('Regression Testing') {
         steps {
@@ -53,9 +51,8 @@ pipeline {
       }
      }
     }  
+  }
 
-    }
-}
                                                             
 
 
