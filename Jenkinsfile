@@ -16,7 +16,7 @@ pipeline {
         }
 
         }
-        stage('Stage 1') {
+        stage('Stage 3') {
       steps {
         script {
           echo 'This is for stage 3 assessment.'
@@ -29,12 +29,12 @@ pipeline {
        stages {
         stage('Regression Testing') {
         steps {
-        echo 'Running regression tests...'
+        echo 'Running regression tests'
     }
   }
      stage('Acceptance Testing') {
         steps {
-        echo 'Running acceptance tests...'
+        echo 'Running acceptance tests'
        }
       }
      }
@@ -42,15 +42,17 @@ pipeline {
   }
 }
         stage('Performance Testing') {
-            echo 'Running performance tests...'
+            steps{
+            echo 'Running performance tests'
           }
          }
        stage('Code Quality Check') {
          steps {
-         echo 'Running code quality checks...'
+         echo 'Running code quality checks'
          }
         }
        }
+}
                                                             
 
 
