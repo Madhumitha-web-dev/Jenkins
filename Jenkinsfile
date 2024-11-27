@@ -35,32 +35,29 @@ pipeline {
      stage('Acceptance Testing') {
         steps {
         echo 'Running acceptance tests...'
+       }
+      }
+     }
+    }  
+  }
 }
-}
-}
-}  
-}
-        }
         stage('Performance Testing and Code Quality') { steps {
-
-parallel {
-
-stage('Performance Testing') {
-
-echo 'Running performance tests...'
-
-sh/run-performance-tests.sh
-
-}
-
-}
-
-stage('Code Quality Check') {
-
-steps {
-
-echo 'Running code quality checks...' sh 'soner-scanner'
-
-}
+           parallel {
+            stage('Performance Testing') {
+            echo 'Running performance tests...'
+          }
+         }
+       stage('Code Quality Check') {
+         steps {
+         echo 'Running code quality checks...'
+         }
+        }
+       }
+     }                                                       
     }
 }
+
+
+
+
+                                                       
