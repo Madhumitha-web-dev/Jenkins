@@ -41,9 +41,7 @@ pipeline {
     }  
   }
 }
-        stage('Performance Testing and Code Quality') { 
-            steps {
-            stage('Performance Testing') {
+        stage('Performance Testing') {
             echo 'Running performance tests...'
           }
          }
@@ -53,8 +51,8 @@ pipeline {
          }
         }
        }
-     }                                                       
-    }
+                                                            
+
 
 
 
