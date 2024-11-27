@@ -17,35 +17,24 @@ pipeline {
 
         }
         stage('Parallel Tasks') {
-
-parallel {
-
-stage('Regression and Acceptance Tests') {
-
-stages {
-
-stage('Regression Testing') {
-
-steps {
-
-echo 'Running regression tests...'
-
-sh/run-regression-tests.sh
-
-}
-
-}
-
-stage('Acceptance Testing') {
-
-steps {
-
-echo 'Running acceptance tests...'
-
-sh/run-acceptance-tests.sh
-
+              parallel {
+              stage('Regression and Acceptance Tests') {
+       stages {
+        stage('Regression Testing') {
+        steps {
+        echo 'Running regression tests...'
+        sh/run-regression-tests.sh
+    }
+  }
+     stage('Acceptance Testing') {
+        steps {
+        echo 'Running acceptance tests...'
+        sh/run-acceptance-tests.sh
 }
 }
 }
-     }  
+}  
+}
+        }
+    }
 }
