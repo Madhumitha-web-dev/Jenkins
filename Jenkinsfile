@@ -8,5 +8,13 @@ pipeline {
                       sh  ' mvn package'
             } 
         } 
+        stage('Clean and Package') {
+        steps {
+        echo 'Cleaning workspace and packaging_
+        sh 'mvn clean package'
+
+        }
+
+        }
      }  
 }
