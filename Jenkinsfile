@@ -23,13 +23,13 @@ pipeline {
         stage('Regression Testing') {
         steps {
         echo 'Running regression tests...'
-        sh/run-regression-tests.sh
+        sh './run-regression-tests.sh'
     }
   }
      stage('Acceptance Testing') {
         steps {
         echo 'Running acceptance tests...'
-        sh/run-acceptance-tests.sh
+        sh './run-acceptance-tests.sh'
 }
 }
 }
