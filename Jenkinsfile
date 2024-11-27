@@ -16,6 +16,21 @@ pipeline {
         }
 
         }
+
+           stage('Parallel Tasks') {
+              parallel {
+        stage('Performance Testing') {
+            steps{
+            echo 'Running performance tests'
+          }
+         }
+       stage('Code Quality Check') {
+         steps {
+         echo 'Running code quality checks'
+         }
+        }
+     }
+}
         stage('Stage 3') {
       steps {
         script {
@@ -38,20 +53,7 @@ pipeline {
       }
      }
     }  
-       stage('Parallel Tasks') {
-              parallel {
-        stage('Performance Testing') {
-            steps{
-            echo 'Running performance tests'
-          }
-         }
-       stage('Code Quality Check') {
-         steps {
-         echo 'Running code quality checks'
-         }
-        }
-     }
-}
+
     }
 }
                                                             
