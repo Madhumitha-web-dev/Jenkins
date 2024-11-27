@@ -38,6 +38,7 @@ pipeline {
         }
       }
     }
+    stage('Regression Acceptance Testing') {
        stages {
         stage('Regression Testing') {
         steps {
@@ -52,6 +53,7 @@ pipeline {
      }
     }  
   }
+}
 
                                                             
 
