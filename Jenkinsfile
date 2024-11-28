@@ -38,7 +38,7 @@ pipeline {
          echo 'Running code quality checks'
          }
         }
-     
+        stage('Regression and Acceptance testing'){
          stages{          
         stage('Regression Testing') {
         steps {
@@ -52,7 +52,7 @@ pipeline {
       }
      }
     }  
-  
+        }
     }
 }
 }
