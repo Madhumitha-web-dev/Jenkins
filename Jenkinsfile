@@ -27,7 +27,7 @@ pipeline {
     }
         
     
-        stages('Performance Testing') {
+        stage('Performance Testing') {
                 parallel {
             steps{
             echo 'Running performance tests'
