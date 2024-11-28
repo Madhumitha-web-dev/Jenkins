@@ -25,10 +25,9 @@ pipeline {
         }
       }
     }
-        
-    
+        stage('Parallel') {
+     parallel {
         stage('Performance Testing') {
-                parallel {
             steps{
             echo 'Running performance tests'
           }
@@ -38,7 +37,7 @@ pipeline {
          echo 'Running code quality checks'
          }
         }
-        stage('Regression and Acceptance testing'){
+        stage('Sequence'){
          stages{          
         stage('Regression Testing') {
         steps {
