@@ -31,7 +31,7 @@ pipeline {
             steps{
             echo 'Running performance tests'
           }
-            
+        }
        stage('Code Quality Check') {
          steps {
          echo 'Running code quality checks'
@@ -55,6 +55,7 @@ pipeline {
     }
 }
 }
+
 
 
                                                             
