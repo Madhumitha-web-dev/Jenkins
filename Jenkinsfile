@@ -18,7 +18,7 @@ pipeline {
         }
 
 
-        stage('Stage 3') {
+        stage('Test stage') {
       steps {
         script {
           echo 'This is for stage 3 assessment.'
@@ -26,13 +26,12 @@ pipeline {
       }
     }
         
-    stage('Test Stage') {
-        parallel {
+    
         stages('Performance Testing') {
+                parallel {
             steps{
             echo 'Running performance tests'
           }
-         }
             
        stage('Code Quality Check') {
          steps {
