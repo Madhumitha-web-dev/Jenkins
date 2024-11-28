@@ -25,10 +25,8 @@ pipeline {
         }
       }
     }
-    stage('Testing') {
+    stage('Test Stage') {
         parallel {
-                   stage('Parallel Tasks') {
-              parallel {
         stage('Performance Testing') {
             steps{
             echo 'Running performance tests'
@@ -53,8 +51,8 @@ pipeline {
       }
      }
     }  
-  }
-}
+  
+
 
                                                             
 
