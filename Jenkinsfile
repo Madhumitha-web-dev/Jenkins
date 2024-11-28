@@ -27,7 +27,6 @@ pipeline {
     }
     stage('Testing') {
         parallel {
-        stages{
                    stage('Parallel Tasks') {
               parallel {
         stage('Performance Testing') {
@@ -55,7 +54,6 @@ pipeline {
      }
     }  
   }
-}
 }
 
                                                             
