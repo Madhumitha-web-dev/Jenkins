@@ -1,14 +1,14 @@
 pipeline { 
     agent any 
     stages { 
-        stage("Checkout /Clone from Git & Maven Build") { 
+        stage("Checkout") { 
             steps { 
                       git branch: "Main" ,   url : "https://github.com/devopsusergit/PetStoreWebApp.git"
                       sh  'mvn clean'
                       sh  ' mvn package'
             } 
         } 
-        stage('Clean and Package') {
+        stage('Clean Package') {
         steps {
         echo 'Cleaning workspace and packaging'
         sh 'mvn clean package'
