@@ -25,7 +25,9 @@ pipeline {
         }
       }
     }
+        
     stage('Test Stage') {
+        stages{
         parallel {
         stage('Performance Testing') {
             steps{
@@ -54,6 +56,7 @@ pipeline {
     }  
         }
     }
+}
 }
 }
 
