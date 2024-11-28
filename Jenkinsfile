@@ -32,7 +32,7 @@ pipeline {
             echo 'Running performance tests'
           }
          }
-            Stages{
+            stages{
        stage('Code Quality Check') {
          steps {
          echo 'Running code quality checks'
