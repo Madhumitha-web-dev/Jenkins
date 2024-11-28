@@ -17,7 +17,16 @@ pipeline {
 
         }
 
-           stage('Parallel Tasks') {
+
+        stage('Stage 3') {
+      steps {
+        script {
+          echo 'This is for stage 3 assessment.'
+        }
+      }
+    }
+    stage('Testing') {
+                   stage('Parallel Tasks') {
               parallel {
         stage('Performance Testing') {
             steps{
@@ -31,14 +40,6 @@ pipeline {
         }
      }
 }
-        stage('Stage 3') {
-      steps {
-        script {
-          echo 'This is for stage 3 assessment.'
-        }
-      }
-    }
-    stage('Regression Acceptance Testing') {
        stages {
         stage('Regression Testing') {
         steps {
